@@ -1,8 +1,11 @@
 import {
   HttpInterceptorFn,
-  HttpErrorResponse
+  HttpErrorResponse,
+  HttpContextToken
 } from '@angular/common/http';
 import { catchError, throwError } from 'rxjs';
+import { Router } from '@angular/router';
+import { inject } from '@angular/core';
 
 export interface CustomApiError {
   status: number;
@@ -11,7 +14,11 @@ export interface CustomApiError {
   original: HttpErrorResponse;
 }
 
+export const SKIP_GLOBAL_AUTH_REDIRECT = new HttpContextToken<boolean>(() => false)
+
 export const apiErrorInterceptor: HttpInterceptorFn = (req, next) => {
+  const router = inject(Router)
+
   return next(req).pipe(
     catchError((err: HttpErrorResponse) => {
 
@@ -22,6 +29,13 @@ export const apiErrorInterceptor: HttpInterceptorFn = (req, next) => {
         original: err
       };
       
+      if (err.status === 401) {
+        const skipRedirect = req.context.get(SKIP_GLOBAL_AUTH_REDIRECT)
+        if (!skipRedirect) {
+          router.navigate(['/login'])
+        }
+      }
+
       return throwError(() => customError); 
     })
   );
