@@ -5,22 +5,22 @@
 <div class="search">
   <input placeholder="Buscar un perfil" type="text">
 </div>
-@defer (when res$ | async) {
-  @let res = res$ | async;
-
-  @if (res) {
-    @if (!('isError' in res)) {
-      <p>{{ res.message }}</p>
-    } @else {
-      @switch (res.status) {
-        @case (500) { <p>loool (Error 500)</p> }
-        @default { <p>a (Error {{ res.status }})</p> }
+<div class="user-actions">
+  @defer (when res$ | async) {
+    @let res = res$ | async;
+  
+    @if (res) {
+      @if (!('isError' in res)) {
+        <p>{{ res.message }}</p>
+      } @else {
+        @switch (res.status) {
+          @case (500) { <p>loool (Error 500)</p> }
+          @default { <p>a (Error {{ res.status }})</p> }
+        }
       }
     }
+  } @loading {
+      <p>olaa</p>
   }
-} @loading {
-  <div class="user-actions">
-    olaa
-  </div>
-}
+</div>
 <div class="menu">oal</div>
