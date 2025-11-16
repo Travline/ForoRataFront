@@ -9,3 +9,11 @@
   grid-template-columns: 1fr 2fr 1fr;
   z-index: 999;
 }
+
+@media (max-width: 480px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

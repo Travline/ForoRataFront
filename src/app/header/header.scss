@@ -35,11 +35,22 @@
   align-items: center;
 }
 
+.menu {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--bg-btn-off);
+}
+
 @media (max-width: 480px) {
   .search{
     display: none;
   }
   .user-actions {
     display: none;
+  }
+
+  .menu {
+    display: block;
   }
 }
