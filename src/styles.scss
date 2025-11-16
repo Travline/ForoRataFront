@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --accent-blue: #73A7DD;
+  --accent-pink: #D868A0;
+  --bg-body: #1B1B1F;
+  --bg-card: #202127;
+  --bg-btn-off: #32363F;
+  --bg-btn-on: #4F5564;
+  --color-text-on: #FFFFFF;
+  --color-text-off: #AAAAAA;
+}
+
+* {
+  font-family: 'Cascadia Mono', monospace;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+button, input {
+  font: inherit;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-blue: #96BDE5;
+    --accent-pink: #E28EB8;
+    --bg-body: #EEEEEE;
+    --bg-card: #D8E2ED;
+    --bg-btn-off: #F2F2F2;
+    --bg-btn-on: #D9D9D9;
+    --color-text-on: #000000;
+    --color-text-off: #666666;
+  }
+}
