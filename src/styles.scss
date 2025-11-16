@@ -21,6 +21,13 @@ html {
   font-size: clamp(14px, 2vw, 18px);
 }
 
+body {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 img, video {
   max-width: 100%;
   height: auto;
