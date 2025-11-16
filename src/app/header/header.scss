@@ -34,3 +34,12 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 480px) {
+  .search{
+    display: none;
+  }
+  .user-actions {
+    display: none;
+  }
+}
