@@ -3,9 +3,24 @@
   <span>ForoRata</span>
 </div>
 <div class="search">
-  <input placeholder="Buscar usuario" type="text">
+  <input placeholder="Buscar un perfil" type="text">
 </div>
-<div class="user-actions">
-  o
-</div>
+@defer (when res$ | async) {
+  @let res = res$ | async;
+
+  @if (res) {
+    @if (!('isError' in res)) {
+      <p>{{ res.message }}</p>
+    } @else {
+      @switch (res.status) {
+        @case (500) { <p>loool (Error 500)</p> }
+        @default { <p>a (Error {{ res.status }})</p> }
+      }
+    }
+  }
+} @loading {
+  <div class="user-actions">
+    olaa
+  </div>
+}
 <div class="menu">oal</div>
