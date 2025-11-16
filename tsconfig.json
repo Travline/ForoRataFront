@@ -16,8 +16,8 @@
     "module": "preserve",
     "baseUrl": "./",
     "paths": {
-      "@app/*": ["src/app/*"],
-    }
+      "@app/*": ["src/app/*"]
+    }    
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
