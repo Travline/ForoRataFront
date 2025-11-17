@@ -3,7 +3,7 @@
   <span>ForoRata</span>
 </div>
 <div class="search">
-  <input placeholder="Buscar un perfil" type="text">
+  <input (input)="onSearchInput($event)" id="search-input" placeholder="Buscar un perfil" type="text">
 </div>
 <div class="user-actions">
   @defer (when res$ | async) {
@@ -15,7 +15,7 @@
       } @else {
         @switch (res.status) {
           @case (500) { <p>loool (Error 500)</p> }
-          @default { <p>a (Error {{ res.status }})</p> }
+          @default { <p>(Error {{ res.status }})</p> }
         }
       }
     }
@@ -23,4 +23,5 @@
       <p>olaa</p>
   }
 </div>
+
 <div class="menu">oal</div>

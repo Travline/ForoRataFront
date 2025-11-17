@@ -1,0 +1,8 @@
+<div class="users-container">
+  @if (isLoading()) { <p>Cargando...</p> }
+  @else {
+    @for (item of results(); track $index) { 
+      <app-user-card [user]="item" class="user-card"></app-user-card>
+    }
+  }
+</div>

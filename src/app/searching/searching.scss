@@ -1,0 +1,16 @@
+.users-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35vw;
+  gap: 2rem;
+  .user-card {
+    background-color: var(--bg-card);
+    width: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+}

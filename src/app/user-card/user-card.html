@@ -1,0 +1,5 @@
+<img [src]= "user.profile_picture" width="50px">
+<span>{{ user.id_user }}</span>
+@if (!user.isFollowed) {
+  <button>seguir</button>
+}
