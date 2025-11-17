@@ -27,7 +27,7 @@ export class SearchService {
       switchMap(term => {
         this.isLoading.set(true);
 
-        if (term.length < 2) {
+        if (term.length < 1) {
           this.isLoading.set(false);
           // 🚀 CAMBIO CLAVE: Usamos 'of' y emitimos un array vacío tipado.
           return of<UserCardData[]>([]); 
