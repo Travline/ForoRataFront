@@ -8,6 +8,7 @@
   --bg-btn-on: #4F5564;
   --color-text-on: #FFFFFF;
   --color-text-off: #AAAAAA;
+  --center-size: 35vw;
 }
 
 * {
@@ -24,6 +25,7 @@ body {
 
 html {
   font-size: clamp(14px, 2vw, 18px);
+  scrollbar-gutter: stable;
 }
 
 .app-root{
@@ -40,6 +42,14 @@ button, input {
   font: inherit;
 }
 
+app-home-posts {
+  width: var(--center-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+} 
+
 @media (prefers-color-scheme: light) {
   :root {
     --accent-blue: #96BDE5;
@@ -50,5 +60,11 @@ button, input {
     --bg-btn-on: #D9D9D9;
     --color-text-on: #000000;
     --color-text-off: #666666;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --center-size: 100%;
   }
 }

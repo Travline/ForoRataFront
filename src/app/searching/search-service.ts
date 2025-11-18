@@ -26,12 +26,20 @@ export class SearchService {
       distinctUntilChanged(),
       switchMap(term => {
         this.isLoading.set(true);
+        const searchingContainer = document.getElementById('searching-container')
 
         if (term.length < 1) {
+          if (searchingContainer) {
+            searchingContainer.style.display = "none"
+          }
           this.isLoading.set(false);
           // 🚀 CAMBIO CLAVE: Usamos 'of' y emitimos un array vacío tipado.
           return of<UserCardData[]>([]); 
         }
+
+        if (searchingContainer) {
+            searchingContainer.style.display = "flex"
+          }
 
         // Llamada HTTP ya tipada
         return this.http.get<UserCardData[]>(

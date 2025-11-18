@@ -1,5 +1,9 @@
-<img [src]= "user.profile_picture" width="50px">
-<span>{{ user.id_user }}</span>
+<div class="user-data" style="display: flex; flex-direction: row; justify-content: center;align-items: center; gap: 1rem;">
+  <div class="" style="width: 2.5rem; height: 2.5rem;">
+    <img [src]= "user.profile_picture" style="height: stretch;width: stretch;object-fit: contain;">
+  </div>
+  <a style="display: inline-block;">{{ user.id_user }}</a>
+</div>
 @if (!user.isFollowed) {
   <button>seguir</button>
 }
