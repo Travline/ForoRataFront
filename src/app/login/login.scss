@@ -22,11 +22,13 @@ button {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   background-color: var(--bg-card);
-  max-width: 80%;
+  width: stretch;
+  max-width: 75%;
   border-style: solid;
   border-width: 0.25rem;
   border-color: var(--accent-pink);
   font-weight: 700;
+  font-size: 1rem;
   color: var(--color-text-on);
 }
 button:hover {
