@@ -39,8 +39,10 @@
 
 .menu {
   display: none;
-  width: 2rem;
-  height: 2rem;
+  padding: 0.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.5rem;
   background-color: var(--bg-btn-off);
 }
 
