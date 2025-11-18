@@ -27,8 +27,8 @@ button {
   border-style: solid;
   border-width: 0.25rem;
   border-color: var(--accent-pink);
+  font-size: var(--font-tiny);
   font-weight: 700;
-  font-size: 1rem;
   color: var(--color-text-on);
 }
 button:hover {
