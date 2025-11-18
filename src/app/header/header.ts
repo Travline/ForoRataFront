@@ -5,6 +5,7 @@ import { catchError, Observable, of } from 'rxjs';
 import { Searching } from '@app/searching/searching';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { SearchService } from '@app/searching/search-service';
+import { LucideAngularModule, Hamburger } from 'lucide-angular';
 
 // Define la estructura de la respuesta exitosa
 interface HealthResponse {
@@ -15,7 +16,7 @@ type ApiResponse = HealthResponse | ErrorState;
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, LucideAngularModule],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
@@ -31,6 +32,8 @@ export class Header {
     alt: 'logo'
   }
   
+  readonly hamburguer = Hamburger
+
   public searchControl = new FormControl('');
 
   private http = inject(HttpClient);

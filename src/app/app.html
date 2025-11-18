@@ -1,8 +1,10 @@
 <app-header class="header"></app-header>
 <app-searching class="searching" id="searching-container"></app-searching>
 
-<main>
-  <app-side-menu class="side-menu"></app-side-menu>
+<main id="main-container">
+  @if (url === 'login') {} @else {
+    <app-side-menu class="side-menu"></app-side-menu>
+  }
   <router-outlet style="display: none;"></router-outlet>
 
 </main>
