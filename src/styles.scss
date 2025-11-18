@@ -9,6 +9,9 @@
   --color-text-on: #FFFFFF;
   --color-text-off: #AAAAAA;
   --center-size: 35vw;
+  --font-biggest: 1.75rem;
+  --font-big: 1.5rem;
+  --font-regular: 1.25rem; 
 }
 
 svg.my-icon {
@@ -20,6 +23,7 @@ svg.my-icon {
 * {
   font-family: 'Cascadia Mono', monospace;
   box-sizing: border-box;
+  font-size: var(--font-regular);
   margin: 0;
   padding: 0;
 }
@@ -46,6 +50,12 @@ img, video {
 
 button, input {
   font: inherit;
+  border-style: none;
+}
+
+input:focus {
+  outline: none;
+  border: none;
 }
 
 app-header {
@@ -104,8 +114,12 @@ app-home-posts {
 
 app-login {
   margin: auto 0 auto 0;
-  max-width: stretch;
   background-color: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;  
 }
 
 @media (prefers-color-scheme: light) {
@@ -132,5 +146,8 @@ app-login {
   }
   app-side-menu {
     display: none;
+  }
+  app-login {
+    width: stretch;
   }
 }
