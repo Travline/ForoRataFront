@@ -21,8 +21,9 @@
     height: stretch;
     padding: 0 1rem;
     border-radius: 0.5rem;
-    background-color: var(--bg-card);
+    background-color: var(--bg-btn-off);
     color: var(--color-text-on);
+    font-size: 1rem;
   }
   input:focus {
     background-color: var(--bg-btn-on);

@@ -95,12 +95,14 @@ app-searching::-webkit-scrollbar {
 }
 
 app-side-menu {
+  position: sticky; // COntener los posts con scroll propio sino
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--bg-card);
   max-height: calc(100dvh - 8rem);
   border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 25%);
 }
 
 app-home-posts {
@@ -118,8 +120,11 @@ app-login {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
-  padding: 2rem;  
+  padding: 2rem; 
+  border-radius: 0.5rem; 
+  box-shadow: 0 4px 8px rgb(0 0 0 / 25%);
 }
 
 @media (prefers-color-scheme: light) {
@@ -127,10 +132,10 @@ app-login {
     --accent-blue: #96BDE5;
     --accent-pink: #E28EB8;
     --bg-body: #EEEEEE;
-    --bg-card: #D8E2ED;
-    --bg-btn-off: #F2F2F2;
-    --bg-btn-on: #D9D9D9;
-    --color-text-on: #000000;
+    --bg-card: #fbfbfb;
+    --bg-btn-off: #D8E2ED;
+    --bg-btn-on: #B9CBDF;
+    --color-text-on: #222222;
     --color-text-off: #666666;
   }
 }
