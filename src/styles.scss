@@ -54,6 +54,19 @@ button, input {
   border-style: none;
 }
 
+.button-pressed {
+  box-shadow: 0 4px 8px rgb(0 0 0 / 25%);
+  transform: scale(1);
+  transition: transform 0.1s ease-in-out;
+}
+
+.button-pressed:hover {
+  transform: scale(1.1);
+}
+.button-pressed:active {
+  transform: scale(0.95);
+}
+
 input:focus {
   outline: none;
   border: none;

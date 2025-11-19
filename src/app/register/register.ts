@@ -23,7 +23,7 @@ export class Register {
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  login(): void {
+  register(): void {
     const user = document.getElementById('user') as HTMLInputElement
     if (user) {
       if ((user.value).trim().length < 2) {
