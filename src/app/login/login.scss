@@ -21,22 +21,10 @@ button {
   margin: 1rem 0 0 0;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  background-color: var(--bg-card);
+  background-color: var(--accent-pink);
   width: stretch;
   max-width: 75%;
-  border-style: solid;
-  border-width: 0.25rem;
-  border-color: var(--accent-pink);
   font-size: var(--font-tiny);
   font-weight: 700;
   color: var(--color-text-on);
-}
-button:hover {
-  background-color: var(--accent-pink);
-  color: #FFFFFF;
-}
-button:active {
-  outline: none;
-  background-color: var(--accent-pink);
-  color: #FFFFFF;
 }
