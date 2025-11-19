@@ -56,11 +56,11 @@ export class Login {
           isError: true,
           status: err.status 
         };
-        console.error(errorState)
+        alert(errorState)
         return of(errorState);
       })
     );
-
+    alert(res$)
     return res$
   }
 }
