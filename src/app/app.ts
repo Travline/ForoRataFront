@@ -22,7 +22,7 @@ export class App {
   ngOnInit(): void {
     this.router.events.subscribe(() => {
       this.url = this.router.url.split('/')[1] || '';
-      if (this.url === 'login') {
+      if (this.url === 'login' || this.url === 'register') {
         const main = document.getElementById('main-container') as HTMLHtmlElement
         main.className = "main-sides-off"
       } else {
