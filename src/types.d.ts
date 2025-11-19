@@ -8,3 +8,8 @@ interface UserCardData {
   profile_picture: string,
   isFollowed: boolean = false
 }
+
+interface UserLogin {
+  id_user: string,
+  password_hash: string
+}

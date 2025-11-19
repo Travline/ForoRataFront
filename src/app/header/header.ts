@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { catchError, Observable, of } from 'rxjs';
-import { Searching } from '@app/searching/searching';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { SearchService } from '@app/searching/search-service';
 import { LucideAngularModule, Hamburger } from 'lucide-angular';
