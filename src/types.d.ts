@@ -16,6 +16,6 @@ interface UserLogin {
 
 interface UserRegister {
   id_user: string,
-  mail: string,
+  email: string,
   password_hash: string
 }

@@ -17,7 +17,7 @@ type ApiResponse = HealthResponse | ErrorState;
 export class Register {
   body: UserRegister = {
     id_user: '',
-    mail: '',
+    email: '',
     password_hash: ''
   }
 
@@ -34,7 +34,7 @@ export class Register {
 
     const mail = document.getElementById('mail') as HTMLInputElement
     if (mail) {
-      this.body.mail = mail.value
+      this.body.email = mail.value
     }
 
     const pass = document.getElementById('pass') as HTMLInputElement
