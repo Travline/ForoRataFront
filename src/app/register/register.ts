@@ -31,6 +31,12 @@ export class Register {
     }
       this.body.id_user = user.value
     }
+
+    const mail = document.getElementById('mail') as HTMLInputElement
+    if (mail) {
+      this.body.mail = mail.value
+    }
+
     const pass = document.getElementById('pass') as HTMLInputElement
     if (pass) {
       if ((pass.value).trim().length < 8) {
