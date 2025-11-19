@@ -2,7 +2,7 @@
 <app-searching class="searching" id="searching-container"></app-searching>
 
 <main id="main-container">
-  @if (url === 'login') {} @else {
+  @if (url === 'login' || url === 'register') {} @else {
     <app-side-menu class="side-menu"></app-side-menu>
   }
   <router-outlet style="display: none;"></router-outlet>
