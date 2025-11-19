@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { catchError, Observable, of } from 'rxjs';
+import { Router } from '@angular/router';
 
 interface HealthResponse {
   message: string;
@@ -20,7 +21,7 @@ export class Login {
     password_hash: ''
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   login(): void {
     const user = document.getElementById('user') as HTMLInputElement
@@ -60,8 +61,7 @@ export class Login {
       // 1. Aquí se ejecuta cuando la petición es EXITOSA (200, 201, etc.)
       // 2. La cookie ya DEBE estar guardada por el navegador si CORS está bien.
       if ('message' in response) {
-        alert(`¡Login Exitoso! Mensaje: ${response.message}`);
-        // Aquí redirigirías al usuario (ej: this.router.navigate(['/dashboard']))
+        this.router.navigate(['/dashboard'])
       }
       // Si la respuesta es un ErrorState (manejado por catchError y re-emitido), haz algo aquí si es necesario
     });
