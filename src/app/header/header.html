@@ -1,26 +1,34 @@
 <div class="logo">
-  <img [src]="logoImage.src" [alt]="logoImage.alt">
-  <span>ForoRata</span>
+  <img [src]="logoImage.src" [alt]="logoImage.alt" routerLink="" style="cursor: pointer;">
+  <span routerLink="" style="cursor: pointer;">ForoRata</span>
 </div>
 <div class="search">
   <input (input)="onSearchInput($event)" id="search-input" placeholder="Buscar un perfil" type="text">
 </div>
+
 <div class="user-actions">
   @defer (when res$ | async) {
     @let res = res$ | async;
   
     @if (res) {
       @if (!('isError' in res)) {
-        <p>{{ res.message }}</p>
+        <p>{{ res.me }}</p>
       } @else {
         @switch (res.status) {
-          @case (500) { <p>loool (Error 500)</p> }
+          @case (500) { <p>(Error 500)</p> }
+          @case (401) { 
+            @if (url === 'login') {
+              <button routerLink="/register" class="button-pressed button-register" style="width: fit-content;">Registrarse</button>
+            } @else {
+              <button routerLink="/login" class="button-pressed button-login" style="width: fit-content;">Iniciar sesión</button>
+            }
+           }
           @default { <p>(Error {{ res.status }})</p> }
         }
       }
     }
   } @loading {
-      <p>olaa</p>
+      <p> </p>
   }
 </div>
 
