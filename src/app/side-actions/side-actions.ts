@@ -4,6 +4,8 @@ import { SKIP_GLOBAL_AUTH_REDIRECT } from '@app/api-error.interceptor';
 import { catchError, Observable, of } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { SideProfile } from '@app/side-profile/side-profile';
+import { SideMenu } from '@app/side-menu/side-menu';
 
 interface HealthResponse {
   me: string
@@ -13,7 +15,7 @@ type ApiResponse = HealthResponse | ErrorState
 
 @Component({
   selector: 'app-side-actions',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, SideProfile, SideMenu],
   templateUrl: './side-actions.html',
   styleUrl: './side-actions.scss',
 })

@@ -1,1 +1,15 @@
-<p>side-profile works!</p>
+@defer (when res$ | async) {
+    @let res = res$ | async;
+  
+    @if (res) {
+      @if (!('isError' in res)) {
+        <div class="" style="width: 2.5rem; height: 2.5rem;">
+          <img [routerLink]="['/profile', res.id_user]" [src]= "res.profile_picture" style="height: stretch;width: stretch;object-fit: contain;">
+        </div>
+        <a [routerLink]="['/profile', res.id_user]" style="display: inline-block; text-align: center;">{{ res.id_user }}</a>
+      } 
+    }
+  } @placeholder {
+    <div class="" style="width: 2.5rem; height: 2.5rem; background-color: var(--bg-button--off);"></div>
+    <a  style="display: inline-block; text-align: center;">Username</a>
+  }
