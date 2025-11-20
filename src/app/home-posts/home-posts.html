@@ -1,4 +1,22 @@
-@let ola = [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9];
-@for (o of ola; track $index) {
-  <div class="post">aaaaaaaaa</div>
-}
+@defer (when res$ | async) {
+  @let res = res$ | async;
+
+  @if (res) {
+      @if (!('isError' in res)) {
+        @for (post of res; track $index) {
+          {{ post.content_post }}
+          <app-post></app-post>
+        }
+      } @else {
+        @switch (res.status) {
+          @case (500) { <p>(Error 500)</p> }
+          @case (404) { 
+            <p>No hay posts</p>
+           }
+          @default { <p>(Error {{ res.status }})</p> }
+        }
+      }
+    }
+  } @placeholder {
+    <div style="width: var(--center-size);"></div>|
+  }

@@ -19,3 +19,12 @@ interface UserRegister {
   email: string,
   password_hash: string
 }
+
+interface PostResponse {
+  id_post: string
+  id_user: string
+  content_post: string
+  likes_count: number
+  comments_count: number
+  created: Date
+}
