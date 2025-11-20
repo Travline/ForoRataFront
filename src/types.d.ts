@@ -21,10 +21,13 @@ interface UserRegister {
 }
 
 interface PostResponse {
-  id_post: string
-  id_user: string
-  content_post: string
-  likes_count: number
-  comments_count: number
-  created: Date
+  content_post: string,
+  id_post: string,
+  id_user: string,
+  likes_count: number,
+  comments_count: number,
+  profile_picture: string,
+  followed: boolean,
+  liked: boolean,
+  created: string
 }

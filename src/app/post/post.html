@@ -1,0 +1,10 @@
+<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+  <div style="display: flex; flex-direction: row; gap: 1rem; align-items: center;">
+    <div style="width: 3rem; height: 3rem;">
+      <img [routerLink]="['/profile', post.id_user]" [src]="post.profile_picture" [alt]="post.id_user">
+    </div>
+    <a [routerLink]="['/profile', post.id_user]">{{ post.id_user }}</a>
+  </div>
+  <button>seguir</button>
+</div>
+<p style="font-weight: 300;">{{ post.content_post }}</p>

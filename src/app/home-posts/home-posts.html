@@ -4,15 +4,17 @@
   @if (res) {
       @if (!('isError' in res)) {
         @for (post of res; track $index) {
-          {{ post.content_post }}
-          <app-post></app-post>
+          <app-post [post]="post">  </app-post>
         }
       } @else {
         @switch (res.status) {
           @case (500) { <p>(Error 500)</p> }
           @case (404) { 
             <p>No hay posts</p>
-           }
+          }
+          @case (401) {
+            <p>(Error {{ res.status }})</p>
+          }
           @default { <p>(Error {{ res.status }})</p> }
         }
       }
