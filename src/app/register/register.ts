@@ -67,7 +67,7 @@ export class Register {
       // 1. Aquí se ejecuta cuando la petición es EXITOSA (200, 201, etc.)
       // 2. La cookie ya DEBE estar guardada por el navegador si CORS está bien.
       if ('message' in response) {
-        this.router.navigate(['/'])
+        window.location.href = '/';
       }
       // Si la respuesta es un ErrorState (manejado por catchError y re-emitido), haz algo aquí si es necesario
     });

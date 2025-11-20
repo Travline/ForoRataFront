@@ -3,10 +3,11 @@ import { Router, RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
 import { Searching } from "./searching/searching";
 import { SideMenu } from "./side-menu/side-menu";
+import { SideActions } from './side-actions/side-actions';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Searching, SideMenu],
+  imports: [RouterOutlet, Header, Searching, SideActions],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
