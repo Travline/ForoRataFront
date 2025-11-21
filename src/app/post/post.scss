@@ -66,6 +66,7 @@
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
+    max-height: 1.1rem;
 
     .post-number {
       font-size: var(--font-tiny);
