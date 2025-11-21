@@ -11,9 +11,9 @@
           @case (401) { 
             <div class="side-no-auth">
               <p>Para hacer publicaciones primero debes iniciar sesión</p>
-              <button routerLink="/register" class="button-pressed button-register" style="width: fit-content;">Registrarse</button>
-              <p>Si aún no tienes una cuenta puedes</p>
               <button routerLink="/login" class="button-pressed button-login" style="width: fit-content;">Iniciar sesión</button>
+              <p>Si aún no tienes una cuenta puedes</p>
+              <button routerLink="/register" class="button-pressed button-register" style="width: fit-content;">Registrarse</button>
             </div>
            }
           @default { <p>(Error {{ res.status }})</p> }
@@ -23,8 +23,8 @@
   } @placeholder {
       <div class="side-no-auth">
       <p>Para hacer publicaciones primero debes iniciar sesión</p>
-      <button routerLink="/register" class="button-pressed button-register" style="width: fit-content;">Registrarse</button>
-      <p>Si aún no tienes una cuenta puedes</p>
       <button routerLink="/login" class="button-pressed button-login" style="width: fit-content;">Iniciar sesión</button>
+      <p>Si aún no tienes una cuenta puedes</p>
+      <button routerLink="/register" class="button-pressed button-register" style="width: fit-content;">Registrarse</button>
     </div>
   }
