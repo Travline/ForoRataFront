@@ -1,0 +1,25 @@
+.user-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-image-wrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.user-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.user-username {
+  display: inline-block;
+  font-size: var(--font-big);
+  cursor: pointer;
+}

@@ -24,6 +24,7 @@
     background-color: var(--bg-btn-off);
     color: var(--color-text-on);
     font-size: 1rem;
+    fill: var(--accent-pink);
   }
   input:focus {
     background-color: var(--bg-btn-on);
@@ -44,14 +45,19 @@
   background-color: var(--bg-btn-off);
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1400px) {
+  .user-actions {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
   .search{
     display: none;
   }
   .user-actions {
     display: none;
   }
-
   .menu {
     display: block;
   }

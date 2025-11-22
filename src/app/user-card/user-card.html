@@ -1,9 +1,24 @@
-<div class="user-data" style="display: flex; flex-direction: row; justify-content: center;align-items: center; gap: 1rem;">
-  <div class="" style="width: 2.5rem; height: 2.5rem;">
-    <img (click)="cleanSearch()" [routerLink]="['/profile', user.id_user]" [src]= "user.profile_picture" style="height: stretch;width: stretch;object-fit: contain;">
+<div class="user-data">
+
+  <div class="user-image-wrapper">
+    <img
+      (click)="cleanSearch()"
+      [routerLink]="['/profile', user.id_user]"
+      [src]="user.profile_picture"
+      class="user-image"
+    >
   </div>
-  <a (click)="cleanSearch()" [routerLink]="['/profile', user.id_user]" style="display: inline-block;">{{ user.id_user }}</a>
+
+  <a
+    (click)="cleanSearch()"
+    [routerLink]="['/profile', user.id_user]"
+    class="user-username"
+  >
+    {{ user.id_user }}
+  </a>
+
 </div>
+
 @if (!user.isFollowed) {
   <button class="button-pressed">seguir</button>
 }

@@ -16,7 +16,15 @@ main {
   padding: 6rem 2rem 0 2rem;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1400px) {
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (max-width: 900px) {
   main {
     width: 100%;
     min-height: 100dvh;
