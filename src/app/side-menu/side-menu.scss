@@ -1,0 +1,17 @@
+button {
+    width: stretch;
+    max-width: 75%;
+    padding: 0.5rem;
+    background-color: var(--bg-btn-off);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 25%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    svg.my-icon {
+      height: auto;
+      width: auto;
+    }
+  }
