@@ -18,9 +18,9 @@
           @case (500) { <p>(Error 500)</p> }
           @case (401) { 
             @if (url === 'login') {
-              <button routerLink="/register" class="button-pressed button-register" style="width: fit-content;">Registrarse</button>
+              <button routerLink="/register" class="button-pressed button-register" style="width: stretch;">Registrarse</button>
             } @else {
-              <button routerLink="/login" class="button-pressed button-login" style="width: fit-content;">Iniciar sesión</button>
+              <button routerLink="/login" class="button-pressed button-login" style="width: stretch;">Iniciar sesión</button>
             }
            }
           @default { <p>(Error {{ res.status }})</p> }
