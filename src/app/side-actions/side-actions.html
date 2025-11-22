@@ -11,9 +11,9 @@
           @case (401) { 
             <div class="side-no-auth">
               <p>Ingresa con tu cuenta y accede a todas las funciones</p>
-              <button routerLink="/login" class="button-pressed button-login" style="width: fit-content;">Iniciar sesión</button>
+              <button routerLink="/login" class="button-pressed button-login" style="width: stretch;">Iniciar sesión</button>
               <p>Si aún no tienes una puedes crearla ahora mismo</p>
-              <button routerLink="/register" class="button-pressed button-register" style="width: fit-content;">Registrarse</button>
+              <button routerLink="/register" class="button-pressed button-register" style="width: stretch;">Registrarse</button>
             </div>
            }
           @default { <p>(Error {{ res.status }})</p> }
