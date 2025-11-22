@@ -154,6 +154,12 @@ button.post-btn {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  svg.my-icon {
+  height: auto;
+  width: auto;
+}
 }
 app-side-menu {
   background-color: var(--bg-card);
