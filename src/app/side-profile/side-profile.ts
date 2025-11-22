@@ -3,6 +3,7 @@ import { HttpClient, HttpContext } from '@angular/common/http';
 import { Component, inject, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SKIP_GLOBAL_AUTH_REDIRECT } from '@app/api-error.interceptor';
+import { ListPlus, LucideAngularModule } from 'lucide-angular';
 import { catchError, Observable, of } from 'rxjs';
 
 interface HealthResponse {

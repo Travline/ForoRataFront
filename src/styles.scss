@@ -29,6 +29,7 @@ svg.my-icon {
   font-size: var(--font-regular);
   margin: 0;
   padding: 0;
+  color: var(--color-text-on);
 }
 
 body {
@@ -140,7 +141,19 @@ app-side-profile {
   max-width: 80%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
+}
+button.post-btn {
+  width: stretch;
+  max-width: 75%;
+  padding: 0.5rem;
+  background-color: var(--accent-blue);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 25%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 app-side-menu {
   background-color: var(--bg-card);
@@ -175,8 +188,8 @@ app-login {
   box-shadow: 0 4px 8px rgb(0 0 0 / 25%);
 }
 .button-login {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
   background-color: var(--accent-pink);
   width: stretch;
   max-width: 75%;
@@ -185,8 +198,8 @@ app-login {
   color: var(--color-text-on);
 }
 .button-register {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
   background-color: var(--accent-blue);
   width: stretch;
   max-width: 75%;
@@ -224,11 +237,11 @@ app-post {
   :root {
     --accent-blue: #96BDE5;
     --accent-pink: #E28EB8;
-    --bg-body: #EEEEEE;
+    --bg-body: #fafeff;
     --bg-card: #fbfbfb;
     --bg-btn-off: #D8E2ED;
     --bg-btn-on: #B9CBDF;
-    --color-text-on: #222222;
+    --color-text-on: #333333;
     --color-text-off: #666666;
   }
 }
