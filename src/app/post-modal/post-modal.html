@@ -1,0 +1,10 @@
+<div class="modal">
+  <textarea (input)="write()" id="text-post" placeholder="Escribe un post" type="text" maxlength="200"></textarea>
+  <div class="footer">  
+    <span id="counter">0/200</span>
+    <div class="actions">
+      <button (click)="close()" class="close button-pressed">Cerrar</button>
+      <button (click)="post()" class="post button-pressed">Publicar</button>
+    </div>
+  <div>
+</div>

@@ -4,7 +4,7 @@
     @if (res) {
       @if (!('isError' in res)) {
         <app-side-profile [user]="res.me"></app-side-profile>
-        <app-side-menu></app-side-menu>
+        <app-side-menu [user]="res.me"></app-side-menu>
       } @else {
         @switch (res.status) {
           @case (500) { <p>(Error 500)</p> }

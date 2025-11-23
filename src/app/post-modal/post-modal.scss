@@ -1,0 +1,55 @@
+.modal {
+  width: var(--center-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-card);
+  height: fit-content;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 25%);
+  padding: 2rem;
+  gap: 1rem;
+
+  textarea {
+    background-color: var(--bg-btn-off);
+    width: stretch;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    min-width: none;
+    outline: none;
+    border: none;
+    &:focus {
+      background-color: var(--bg-btn-on);
+    }
+  }
+
+  .footer {
+    width: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    span {
+      font-size: var(--font-tiny);
+    }
+
+    .actions { 
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: end;
+      gap: 1rem;
+      width: stretch;
+      button {
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+      }
+      .close {
+        background-color: var(--bg-btn-off);
+      }
+      .post {
+        background-color: var(--accent-blue);
+      }
+    }
+  }
+}

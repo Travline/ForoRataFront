@@ -4,10 +4,11 @@ import { Header } from './header/header';
 import { Searching } from "./searching/searching";
 import { SideMenu } from "./side-menu/side-menu";
 import { SideActions } from './side-actions/side-actions';
+import { PostModal } from './post-modal/post-modal';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Searching, SideActions],
+  imports: [RouterOutlet, Header, Searching, SideActions, PostModal],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

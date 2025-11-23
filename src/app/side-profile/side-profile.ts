@@ -31,6 +31,13 @@ export class SideProfile {
   // Declara res$ sin inicializarlo, o inicialízalo como null/undefined/of(null)
   res$!: Observable<ApiResponse>; 
 
+  cleanModal() {
+    const modal = document.getElementById('post-modal')
+    if(modal) {
+      modal.style.display = 'flex'
+    } 
+  }
+
   ngOnInit(): void {
     // ESTO SE EJECUTA DESPUÉS DE QUE EL INPUT 'user' RECIBIÓ SU VALOR
     console.log('User ID en SideProfile:', this.user); // Esto ya no será undefined

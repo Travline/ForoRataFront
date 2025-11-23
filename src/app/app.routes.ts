@@ -5,7 +5,7 @@ import { Register } from './register/register';
 import { Profile } from './profile/profile';
 
 export const routes: Routes = [
-  { path: '', component: HomePosts },
+  { path: '', component: HomePosts, runGuardsAndResolvers: 'always' },
   { path: 'login', component: Login },
   { path: 'register', component: Register },
   { path: 'profile/:id_user', component: Profile }
