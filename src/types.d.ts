@@ -22,6 +22,7 @@ interface UserRegister {
 
 interface PostResponse {
   content_post: string,
+  reply_to: string | null,
   id_post: string,
   id_user: string,
   likes_count: number,
@@ -30,4 +31,18 @@ interface PostResponse {
   followed: boolean,
   liked: boolean,
   created: string
+}
+
+interface PostFocusResponse {
+  content_post: string,
+  reply_to: string | null,
+  id_post: string,
+  id_user: string,
+  likes_count: number,
+  comments_count: number,
+  profile_picture: string,
+  followed: boolean,
+  liked: boolean,
+  created: string,
+  replies: PostResponse[]
 }

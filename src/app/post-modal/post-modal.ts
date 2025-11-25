@@ -55,7 +55,10 @@ export class PostModal {
       if (textarea.value.length < 1) {
         return
       }
-      const body = { content_post :textarea.value.trim()}
+      const body = { 
+        content_post :textarea.value.trim(),
+        reply_to: null
+      }
 
       this.http.post<HealthResponse>(
         url, body,

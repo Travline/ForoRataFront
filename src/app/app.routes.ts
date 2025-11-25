@@ -3,10 +3,12 @@ import { HomePosts } from './home-posts/home-posts';
 import { Login } from './login/login';
 import { Register } from './register/register';
 import { Profile } from './profile/profile';
+import { FocusPost } from './focus-post/focus-post';
 
 export const routes: Routes = [
   { path: '', component: HomePosts, runGuardsAndResolvers: 'always' },
   { path: 'login', component: Login },
   { path: 'register', component: Register },
-  { path: 'profile/:id_user', component: Profile }
+  { path: 'profile/:id_user', component: Profile },
+  { path: 'post/:id_post', component: FocusPost }
 ];

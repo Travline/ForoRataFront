@@ -1,0 +1,27 @@
+@defer (when res$ | async) {
+  @let res = res$ | async;
+
+  @if (res) {
+      @if (!('isError' in res)) {
+        <app-post [post]="res">  </app-post>
+        <div class="replies-container">
+          @for (replie of res.replies; track $index) {
+            <app-post [post]="replie"></app-post>
+          }
+        </div>
+      } @else {
+        @switch (res.status) {
+          @case (500) { <p>(Error 500)</p> }
+          @case (404) { 
+            <p>No hay posts</p>
+          }
+          @case (401) {
+            <p>(Error {{ res.status }})</p>
+          }
+          @default { <p>(Error {{ res.status }})</p> }
+        }
+      }
+    }
+  } @placeholder {
+    <div style="width: var(--center-size);"><p style="text-align: center;">Cargando...</p></div>
+  }

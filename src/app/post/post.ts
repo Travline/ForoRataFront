@@ -9,7 +9,7 @@ import { Copy, Heart, LucideAngularModule, MessageCircleMore } from 'lucide-angu
   styleUrl: './post.scss',
 })
 export class Post {
-  @Input({ required: true }) post!: PostResponse;
+  @Input({ required: true }) post!: PostResponse | PostFocusResponse;
 
   readonly heart = Heart
   readonly comment = MessageCircleMore
