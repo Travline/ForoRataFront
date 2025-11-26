@@ -3,7 +3,16 @@
 
   @if (res) {
       @if (!('isError' in res)) {
-        <app-post [post]="res">  </app-post>
+        <app-post [post]="res"></app-post>
+        <div class="reply">
+          <textarea (focus)="showActions()" (input)="write()" id="text-reply" placeholder="Escribe un comentario" type="text" maxlength="200"></textarea>
+          <div class="footer" id="footer-reply">  
+            <span id="counter-reply">0/200</span>
+            <div class="actions">
+              <button (click)="post()" class="post button-pressed">Responder</button>
+            </div>
+          </div>
+        </div>
         <div class="replies-container">
           @for (replie of res.replies; track $index) {
             <app-post [post]="replie"></app-post>

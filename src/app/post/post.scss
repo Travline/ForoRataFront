@@ -43,10 +43,26 @@
   }
 
   .follow-btn {
-    background: none;
+    background-color: var(--bg-btn-off);
     border: none;
+    outline: none;
     cursor: pointer;
-    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    &:hover {
+      border: none;
+      outline: none;
+      background-color: var(--bg-btn-on);
+    }
+    &:active {
+      border: none;
+      outline: none;
+      background-color: var(--bg-btn-on);
+    }
   }
 }
 
