@@ -203,6 +203,14 @@ app-home-posts {
   gap: 1rem;
 } 
 
+app-profile {
+  width: var(--center-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+} 
+
 app-focus-post {
   width: var(--center-size);
   display: flex;

@@ -73,7 +73,6 @@ export class PostModal {
             status: err.status || 500 // Maneja status si no existe
           };
           // Aquí manejarías errores, por ejemplo, mostrando un mensaje al usuario
-          alert(`Error al iniciar sesión. Status: ${errorState.status}`);
           return of(errorState as any); // Retorna un Observable con el estado de error
         })
       ).subscribe(response => {

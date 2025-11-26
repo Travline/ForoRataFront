@@ -127,7 +127,7 @@ export class FocusPost implements OnInit {
             status: err.status || 500 // Maneja status si no existe
           };
           // Aquí manejarías errores, por ejemplo, mostrando un mensaje al usuario
-          alert(`Error al iniciar sesión. Status: ${errorState.status}`);
+          alert(`Error ${errorState.status}`)
           return of(errorState as any); // Retorna un Observable con el estado de error
         })
       ).subscribe(response => {
@@ -136,6 +136,7 @@ export class FocusPost implements OnInit {
           this.router.navigate(['/post', this.id_post]);
         });
         this.close()
+        
         // Si la respuesta es un ErrorState (manejado por catchError y re-emitido), haz algo aquí si es necesario
       });
     }
