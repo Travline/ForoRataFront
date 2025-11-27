@@ -35,6 +35,33 @@
             <span>{{ res.following }} Siguiendo</span>
           </div>
           </div>
+          <div class="posts-container">
+            @defer (when resp$ | async) {
+              @let resp = resp$ | async;
+  
+              @if (resp) {
+                  @if (!('isError' in resp)) {
+                    @for (post of resp; track $index) {
+                      <app-post [post]="post">  </app-post>
+                    }
+                  } @else {
+                    @switch (resp.status) {
+                      @case (500) { <p>(Error 500)</p> }
+                      @case (404) { 
+                        <p>No hay posts</p>
+                      }
+                      @case (401) {
+                        <p>(Error {{ resp.status }})</p>
+                      }
+                      @default { <p>(Error {{ resp.status }})</p> }
+                    }
+                  }
+                }
+              } @placeholder {
+                <div style="width: var(--center-size);"><p style="text-align: center;">Cargando...</p></div>
+              }
+          </div>
+
       } @else {
         @switch (res.status) {
           @case (500) { <p>(Error 500)</p> }
