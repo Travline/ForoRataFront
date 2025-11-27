@@ -46,3 +46,11 @@ interface PostFocusResponse {
   created: string,
   replies: PostResponse[]
 }
+
+interface ProfileData {
+  id_user: string,
+  profile_picture: string,
+  description: string,
+  followers: number,
+  following: number
+}
